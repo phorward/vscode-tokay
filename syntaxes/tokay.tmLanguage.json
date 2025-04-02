@@ -13,8 +13,21 @@
         },
         {
             "name": "keyword.control.tokay",
-            "match": "\\b(accept|begin|break|continue|else|end|exit|false|for|if|in|loop|next|null|push|reject|repeat|reset|return|self|true|void)\\b",
+            "match": "\\b(?<!\\.)\\b(accept|begin|break|continue|else|end|exit|for|if|in|loop|next|push|reject|repeat|reset|return)\\b",
             "comment": "Reserved keyword"
+        },
+        {
+            "name": "constant.language.tokay",
+            "match": "\\b(?<!\\.)\\b(false|null|true|void|self)\\b",
+            "comment": "Reserved constants"
+        },
+        {
+            "name": "constant.numeric.tokay",
+            "match": "\\d*\\.\\d+|\\d+\\.\\d*|\\d+"
+        },
+        {
+            "name": "keyword.operator.tokay",
+            "match": "==?|!=?|<=?|>=?|\\+=?|-=?|\\*=?|/=?|//=?|%=?|\\|\\|?|&&|\\?"
         },
         {
             "name": "string.quoted.double.tokay",
@@ -49,10 +62,6 @@
                 }
             ],
             "comment": "Touch"
-        },
-        {
-            "name": "constant.numeric",
-            "match": "\\d+"
         }
     ]
 }
