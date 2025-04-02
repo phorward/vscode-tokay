@@ -1,0 +1,58 @@
+{
+    "scopeName": "source.tokay",
+    "fileTypes": [
+        "tok"
+    ],
+    "foldingStartMarker": "{\\s*$",
+    "foldingStopMarker": "^\\s*}",
+    "patterns": [
+        {
+            "match": "#.*",
+            "name": "comment.line.hash.tokay",
+            "comment": "Comment"
+        },
+        {
+            "name": "keyword.control.tokay",
+            "match": "\\b(accept|begin|break|continue|else|end|exit|false|for|if|in|loop|next|null|push|reject|repeat|reset|return|self|true|void)\\b",
+            "comment": "Reserved keyword"
+        },
+        {
+            "name": "string.quoted.double.tokay",
+            "begin": "\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.tokay",
+                    "match": "\\."
+                }
+            ],
+            "comment": "Constant string"
+        },
+        {
+            "name": "string.quoted.interpolated.match.tokay",
+            "match": "''(\\\\.|[^'])+''",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.tokay",
+                    "match": "\\."
+                }
+            ],
+            "comment": "Match"
+        },
+        {
+            "name": "string.quoted.interpolated.touch.tokay",
+            "match": "'(?!')(\\\\.|[^'])+'",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.tokay",
+                    "match": "\\."
+                }
+            ],
+            "comment": "Touch"
+        },
+        {
+            "name": "constant.numeric",
+            "match": "\\d+"
+        }
+    ]
+}
