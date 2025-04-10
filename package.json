@@ -2,15 +2,18 @@
 	"name": "vscode-tokay",
 	"version": "0.0.2",
 	"author": "Jan Max Meyer <jmm@phorward.de>",
+	"publisher": "phorward",
 	"engines": {
 		"vscode": "^1.2.0"
 	},
 	"license": "MIT",
-	"displayName": "Tokay language support",
+	"displayName": "Tokay Programming Language syntax highlighting",
 	"description": "Language support for Tokay programming language",
 	"categories": [
 		"Programming Languages"
 	],
+	"icon": "tokay.png",
+	"repository": "https://github.com/tokay-lang/vscode-tokay",
 	"contributes": {
 		"languages": [
 			{
@@ -32,7 +35,7 @@
 			}
 		]
 	},
-	"__metadata": {
-		"size": 6492
+	"devDependencies": {
+		"@vscode/vsce": "^3.3.2"
 	}
 }
