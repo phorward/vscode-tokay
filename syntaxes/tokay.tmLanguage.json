@@ -23,7 +23,7 @@
         },
         {
             "name": "constant.numeric.tokay",
-            "match": "\\d*\\.\\d+|\\d+\\.\\d*|\\d+"
+            "match": "\\b(?<!\\.)\\b(\\d*\\.\\d+|\\d+\\.\\d*|\\d+)"
         },
         {
             "name": "keyword.operator.tokay",
